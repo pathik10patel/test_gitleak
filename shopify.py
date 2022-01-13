@@ -5,7 +5,7 @@ import gridfs
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
-mongo_connection= PyMongo(app, uri ='mongodb://localhost:27017/local' )
+mongo_connection= PyMongo(app, uri ='mongodb://root:password@mongo:27017/local?authSource=admin' )
 
 
     
@@ -65,4 +65,4 @@ def update_item():
 
     
 if __name__ == "__main__":
-    app.run(debug=True,port=8080)
+    app.run(debug=True,host='0.0.0.0',port=8087)
