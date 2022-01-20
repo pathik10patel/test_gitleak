@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "4562b0f7-b08b-4ffc-9fb3-53ad823005bb",
+		"name": "Shopify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8087/retrive",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8087/retrive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"retrive"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8087/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/F:/Google drive pics/2014/2014-07-17 14.29.35.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Tshirt",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Boys tshirt",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"type": "default"
+						},
+						{
+							"key": "currency",
+							"value": "CAD",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8087/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8087/remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"61e8e3ce0378b882d84b7b4f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8087/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "61e91a96b4cd1832c774a6db",
+							"type": "default"
+						},
+						{
+							"key": "title",
+							"value": "shirt",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Boys shirt",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"type": "default"
+						},
+						{
+							"key": "product_image_name",
+							"value": "2014-07-17 14.29.35.jpg",
+							"type": "default"
+						},
+						{
+							"key": "currency",
+							"value": "CAD",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8087/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
