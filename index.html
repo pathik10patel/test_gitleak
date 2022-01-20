@@ -1,0 +1,32 @@
+<html>
+
+    <body>
+                <button onclick="myFunction()" id="btn">Export Project</button>
+
+<script>
+    function myFunction() {
+    var settings = {
+        "url": "http://127.0.0.1:8087/download/project_csv",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+            "Cookie": "csrftoken=YsVxpYIULKof5EzHSSVb2WbcCL43nFIKjveBHAWL18JnICWggsKm8nRuxk2rYTHt"
+        },
+    };
+        var myHeaders = new Headers();
+        myHeaders.append("Cookie", "csrftoken=YsVxpYIULKof5EzHSSVb2WbcCL43nFIKjveBHAWL18JnICWggsKm8nRuxk2rYTHt");
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("http://127.0.0.1:8087/download/project_csv", requestOptions)
+            .then(response => response.text())
+            .then(result => alert("file downloaded"))
+            .catch(error => console.log('error', error));
+}
+</script>                
+    </body>
+</html>
