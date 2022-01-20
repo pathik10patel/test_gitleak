@@ -9,6 +9,7 @@ You just need to run "docker-compose up" to start the api api will be running on
 HTTP POST: 
 /add
 Request: 
+![add-request](https://github.com/pathik10patel/Task_interview_shopify/blob/main/screenshots/add.PNG)
 Response: 
 Status: 200 OK 
 {
@@ -17,25 +18,22 @@ Status: 200 OK
 
 HTTP GET: 
 /retrive 
-
+Request: 
+![retrive-request](https://github.com/pathik10patel/Task_interview_shopify/blob/main/screenshots/retrive.PNG)
 Response: Data retrived from database. 
 
 HTTP PUT: 
 /update 
 Request: 
-
+![update-request](https://github.com/pathik10patel/Task_interview_shopify/blob/main/screenshots/update.PNG)
 Response: 
 Status: 200 OK 
-{"message":
-                        True}
+{"message":True}
 
 HTTP DELETE: 
 /remove 
 Request: 
-{
-    "id": "61d90636f551cbaeb8ec7c30"
-}
-
+![remove-request](https://github.com/pathik10patel/Task_interview_shopify/blob/main/screenshots/remove.PNG)
 Response: 
 Status: 200 OK 
 true
