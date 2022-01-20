@@ -4,6 +4,7 @@
 
 To run this project you will be needing a docker and docker-compose installed in your system.
 You just need to run "docker-compose up" to start the api api will be running on 8087 port. of your localhost.
+To Download the csv file open the html file and click on the download button file will be downloaded in the docker
 
 ## Requests
 HTTP POST: 
