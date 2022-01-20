@@ -1,2 +1,6 @@
 flask
 flask_pymongo
+pandas
+flask_cors
+pymongo
+dnspython
