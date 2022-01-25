@@ -2,7 +2,7 @@ name: Git Scan
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: actions/setup-go@v2.1.5
     steps:
       - run: git clone https://github.com/zricethezav/gitleaks.git
       - run: cd gitleaks && make build
