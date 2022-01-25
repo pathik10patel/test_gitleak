@@ -2,8 +2,10 @@ name: Git Scan
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: zricethezav/gitleaks:latest
+    runs-on: ubuntu-latest
     steps:
+      - run: git clone https://github.com/zricethezav/gitleaks.git
+      - run: cd gitleaks && make build
       - run: gitleaks detect
       #- run: pip install detect-secrets
       #- run: detect-secrets scan --all-files
