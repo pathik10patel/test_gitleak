@@ -26,6 +26,7 @@ jobs:
     # Run build of the application
     - name: Run build
       run: |
+        go mod init 
         git clone https://github.com/zricethezav/gitleaks.git
         cd gitleaks && make build
         gitleaks detect
